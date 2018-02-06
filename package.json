@@ -9,10 +9,6 @@
   "engines": {
     "node":"7.3.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/devenlifsbrah/prj.git"
-  },
   "author": "",
   "license": "ISC",
   "bugs": {
