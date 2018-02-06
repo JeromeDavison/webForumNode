@@ -198,9 +198,9 @@ app.get('/', loggedin, function (req, res) {
 app.post('/submission', loggedin, function (req, res) {
 	
 	content = new hammer();
-	if ((req.body.title.length || req.body.post1) < 20 || '')
+	if ((req.body.title.length || req.body.post1) < 10 || '')
       {  
-		res.send('Please enter some more characters, thanks');		
+		res.send('Title and Post much each have over 10 chars, thanks');		
 
 	}
 	else {  
