@@ -186,7 +186,7 @@ app.post('/login', passport.authenticate('local'), function(req, res) {
 });
 
 
-app.get('/', loggedin, function (req, res) {
+app.get('/', function (req, res) {
 	res.sendFile(__dirname + '/login.html');
 	
 	
