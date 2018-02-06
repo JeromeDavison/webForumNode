@@ -195,14 +195,6 @@ app.get('/', loggedin, function (req, res) {
 	
 });
 
-app.get('/', loggedin, function (req, res) {
-	res.sendFile(__dirname + '/index.html');
-	
-	
-	
-	
-	
-});
 app.post('/submission', loggedin, function (req, res) {
 	
 	content = new hammer();
