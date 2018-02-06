@@ -6,7 +6,7 @@ var LocalStrategy = require('passport-local');
 var passportLocalMongoose = require('passport-local-mongoose');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://admin:imaboss13@ds123658.mlab.com:23658/testfriend');
-var body = require('body-parser'),
+var body = require('body-parser')
 
 
 var port = process.env.PORT || 8080;
