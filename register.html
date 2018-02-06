@@ -1,0 +1,42 @@
+<html>
+<header><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></header>
+<body>
+
+<style>
+.container {
+margin-top:50px;
+
+}
+
+</style>
+
+<div class="container">
+	<div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Register here!</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" method = "POST" action = "/register">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="username" name="username" type="text" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Password" name="password" type="password" >
+                            </div>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <button type="submit" class="btn btn-success btn-block" name ="submit">Login</button>
+                            <p>Already a member?<a href="/login" class="">Sign in</a></p>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+
+</html>

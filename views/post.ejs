@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>POST_TITLE | Node.js Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Forum</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+	      <li class=""><a href="/profile/<%= userID %>">Profile</a></li>
+
+      <li class=""><a href="/Home">Home</a></li>
+        <li class=""><a href="/submission">Post</a></li>
+        <li class=""><a href="/logout">Log Out</a></li>
+
+    </ul>
+    
+  </div><!-- /.navbar-collapse -->
+</nav>
+    
+    <div class="container">
+        <div>
+    <h2><%= title %></h2> <small>Created by, <%= userPoster%></small>
+<hr>
+    <p><%= posts %></p>
+    <hr>
+	 <%  for (var i = 0; i < comment.comment.length; i++){%>
+	<p><%= comment.comment[i] %> </p>
+	<small> by, <%= comment.users[i] %> </small>
+	<br>
+	 <% } %>
+	<h1>Comment</h1>
+	<form method = "POST" action = "/post/<%= postid.id %>" >
+	<textarea class="form-control" rows="5" id="comment" name = "comment" ></textarea>
+	<br>
+	<button type = "submit">Post Comment</button>
+	
+	</form>
+	
+</div>
+    </div>
+</body>
+
+</html>
